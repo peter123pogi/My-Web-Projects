@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Crush or Uncrush?</title>
+</head>
+<body style="margin: 0px; background-color: rgb(255, 227, 227);">
+    <div class="main">
+        <div class="input-container">
+            <h1 class="text">Crush or Uncrush?</h1>
+            <div style="width: 285px; display: flex; flex-wrap: wrap; margin: 0 auto; justify-content: center; position: relative; top: 6rem; row-gap: 1rem;">
+                <input oninput="alphabeticalInput(this)" type="text" placeholder="Your Name" class="main-person-input">
+                <input oninput="alphabeticalInput(this)" type="text" placeholder="Your Crush's Name" class="crush-input">
+                <button type="button" title="Submit" class="proceed" onclick="submitName('main-person-input', 'crush-input')" style="margin-top: 2rem;">Submit</button>
+            </div>
+        </div>
+        <div class="main-box-container">
+            <div class="picture-container" style="background-image: url('img/please.gif');"></div>
+            <h1 class="text"><span class="crush"></span>, Are you sure you want to have a Crush on <span class="main-person"></span>?</h1>
+            <div style="width: 100%; display: grid; grid-template-columns: 10rem 6rem; justify-content: center;">
+                <button type="button" data-yes onmouseover="buttonMoveHover('[data-yes]'); showTitle('[data-yes]', 'main-person-input')" ondblclick="showAnswer('yes-container')">Crush</button>
+                <button type="button" data-no ondblclick="showAnswer('no-container')" onmouseover="showTitle('[data-no]', 'main-person-input')">Uncrush</button>
+            </div>
+        </div>
+        <div class="yes-container">
+            <div class="picture-container" style="background-image: url('img/yes.gif');"></div>
+            <h1 class="text">Congrats <span class="main-person"></span>. <span class="crush"></span> is Officially Accept you as your Crush</h1>
+            <div style="display: flex; justify-content: center; width: 100%">
+                <button type="button" title="Try Again" data-try-again onclick="backInputPage()">Try Again</button>
+            </div>
+        </div>
+        <div class="no-container">
+            <div class="picture-container" style="background-image: url('img/no.gif');"></div>
+            <h1 class="text">Hays, Bawi Nlang Next Life <span class="main-person"></span></h1>
+            <div style="display: flex; justify-content: center; width: 100%;">
+                <button type="button" title="Try Again" data-try-again onclick="backInputPage()">Try Again</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
