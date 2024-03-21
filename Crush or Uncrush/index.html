@@ -20,8 +20,8 @@
             <div class="picture-container" style="background-image: url('img/please.gif');"></div>
             <h1 class="text"><span class="crush"></span>, Are you sure you want to have a Crush on <span class="main-person"></span>?</h1>
             <div style="width: 100%; display: grid; grid-template-columns: 10rem 6rem; justify-content: center;">
-                <button type="button" data-yes onmouseover="buttonMoveHover('[data-yes]'); showTitle('[data-yes]', 'main-person-input')" ondblclick="showAnswer('yes-container')">Crush</button>
-                <button type="button" data-no ondblclick="showAnswer('no-container')" onmouseover="showTitle('[data-no]', 'main-person-input')">Uncrush</button>
+                <button type="button" data-yes onmouseover="buttonMoveHover('[data-yes]'); showTitle('[data-yes]', 'main-person-input')" onclick="showAnswer('yes-container')">Crush</button>
+                <button type="button" data-no onclick="showAnswer('no-container')" onmouseover="showTitle('[data-no]', 'main-person-input')">Uncrush</button>
             </div>
         </div>
         <div class="yes-container">
