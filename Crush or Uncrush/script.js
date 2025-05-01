@@ -20,10 +20,10 @@ function showTitle(button, crush) {
     let person = document.querySelector(`.${crush}`).value
     switch(button) {
         case '[data-yes]':
-            document.querySelector(button).title = 'I do want to have a Crush on ' + titleCasing(person)
+            document.querySelector(button).title = "I'll accept " + titleCasing(person)
             break
         case '[data-no]':
-            document.querySelector(button).title = `I don't want to have a Crush on ` + titleCasing(person)
+            document.querySelector(button).title = `I'll reject ` + titleCasing(person)
             break
     }
 }
